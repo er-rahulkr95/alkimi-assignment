@@ -1,5 +1,5 @@
 
-import { webSection } from "@/models/webSection";
+// import { webSection } from "@/models/webSection";
 import React from "react";
 import SectionContent from "../SectionContent/SectionContent";
 import AboutUs from "../AboutUs/AboutUs";
@@ -16,7 +16,8 @@ import Faq from "../Faq/Faq";
         faq: { id: number; query: string; desc: string;}[],
  * @returns <TSX>
  */
-const WebSection = ({ sectionType, data }: webSection) => {
+const WebSection = ({ sectionType, data }: { sectionType: string,
+  [key:string]:any}) => {
   switch (sectionType) {
     case "section":
       return (
