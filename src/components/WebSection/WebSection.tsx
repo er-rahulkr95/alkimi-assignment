@@ -1,3 +1,4 @@
+
 import { webSection } from "@/models/webSection";
 import React from "react";
 import SectionContent from "../SectionContent/SectionContent";
