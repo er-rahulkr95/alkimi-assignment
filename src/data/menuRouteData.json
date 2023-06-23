@@ -1,0 +1,7 @@
+[
+    {"routeName":"Home", "routePath":"/" },
+    {"routeName":"About Us", "routePath":"/about" },
+    {"routeName":"Products", "routePath":"/product" },
+    {"routeName":"Services", "routePath":"/services" },
+    {"routeName":"Contact Us", "routePath":"/contactus" }
+]

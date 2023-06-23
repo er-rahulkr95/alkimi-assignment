@@ -4,14 +4,14 @@ import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import { useRouter } from "next/navigation";
 import Banner from "../Banner/Banner";
-
+import { navBar } from "@/models/navBar";
 /**
  * Component to show Nav Bar on each page along with navigation menu for mobile view to go to several pages
- * 
+ *
  * @returns <TSX>
  */
 
-const NavBar = () => {
+const NavBar = ({ navRoutes }: navBar) => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
   const router = useRouter();
   const handleOpenMenu = () => setToggleMenu(!toggleMenu);
@@ -41,21 +41,13 @@ const NavBar = () => {
       {toggleMenu && (
         <div className="w-full h-[95vh] flex flex-col justify-center relative">
           <ul className="flex flex-col justify-center">
-            <li className="p-4">
-              <div onClick={() => handleGoToPage("/")}>Home</div>
-            </li>
-            <li className="p-4">
-              <div onClick={() => handleGoToPage("/about")}>About Us</div>
-            </li>
-            <li className="p-4">
-              <div onClick={() => handleGoToPage("/product")}>Products</div>
-            </li>
-            <li className="p-4">
-              <div onClick={() => handleGoToPage("/services")}>Services</div>
-            </li>
-            <li className="p-4">
-              <div onClick={() => handleGoToPage("/contactus")}>Contact Us</div>
-            </li>
+            {navRoutes.map((nav, index) => (
+              <li key={index} className="p-4">
+                <div onClick={() => handleGoToPage(nav.routePath)}>
+                  {nav.routeName}
+                </div>
+              </li>
+            ))}
           </ul>
           <div className="absolute bottom-0">
             <Banner />

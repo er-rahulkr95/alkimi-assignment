@@ -5,7 +5,7 @@ export const metadata = {
   }
 const ContactUs = () => {
   return (
-    <div className='text-white text-center'>ContactUs</div>
+    <h1 className='text-white text-center'>ContactUs</h1>
   )
 }
 

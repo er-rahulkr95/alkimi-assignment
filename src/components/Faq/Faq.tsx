@@ -3,7 +3,6 @@ import { faqsData } from "@/models/sectionData";
 import React, { useState } from "react";
 import Accordion from "../Accordion/Accordion";
 
-
 /**
  * Component to show faqs 
  * @param param0 <Array<Object>>  Array of objects containing faqs Data=> faqs:{ id: number; query: string; desc: string;}[]

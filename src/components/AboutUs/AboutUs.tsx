@@ -1,10 +1,9 @@
 import { aboutus } from "@/models/sectionData";
 import React from "react";
 
-
 /**
  * component to show About Us section
- * @param param0 <string> About us props 
+ * @param param0 <string> About us props
  * @returns TSX
  */
 const AboutUs = ({ about }: aboutus) => {
@@ -15,11 +14,21 @@ const AboutUs = ({ about }: aboutus) => {
           <h1 className="text-white font-extrabold text-[40px] md:text-[120px] leading-[100%]">
             About Us
           </h1>
-          <span className="hover:text-pink-500 w-min"><a href="https://www.instagram.com/" target="_blank">Instagram</a></span>
-          <span className="hover:text-blue-500 w-min"><a href="https://in.linkedin.com/" target="_blank">LinkedIn</a></span>
+          <span className="hover:text-pink-500 w-min">
+            <a href="https://www.instagram.com/" target="_blank">
+              Instagram
+            </a>
+          </span>
+          <span className="hover:text-blue-500 w-min">
+            <a href="https://in.linkedin.com/" target="_blank">
+              LinkedIn
+            </a>
+          </span>
         </div>
         <div className="w-full md:w-[575px] ">
-          <p className="opacity-[0.7] group-hover:text-orange-700 group-hover:opacity-[1]">{about}</p>
+          <p className="opacity-[0.7] group-hover:text-orange-700 group-hover:opacity-[1]">
+            {about}
+          </p>
         </div>
       </div>
     </div>

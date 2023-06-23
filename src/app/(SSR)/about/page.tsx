@@ -6,7 +6,7 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className='text-white text-center'>About Alkimi</div>
+    <h1 className='text-white text-center'>About Alkimi</h1>
   )
 }
 

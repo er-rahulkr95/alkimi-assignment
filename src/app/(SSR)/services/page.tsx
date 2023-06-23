@@ -4,7 +4,7 @@ export const metadata = {
   }
 const Services = () => {
   return (
-    <div className='text-white text-center'>Services</div>
+    <h1 className='text-white text-center'>Services</h1>
   )
 }
 

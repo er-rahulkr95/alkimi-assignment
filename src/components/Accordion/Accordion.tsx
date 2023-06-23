@@ -1,23 +1,17 @@
 "use client";
 
-import React, { Dispatch, SetStateAction, FC } from "react";
-
-interface props {
-  faqsContent: { id: number; query: string; desc: string };
-  showIndex: number;
-  setShowIndex: Dispatch<SetStateAction<number>>;
-}
-
+import React, { FC } from "react";
+import { banner } from "@/models/sectionData";
 
 /**
  * component for faq accordion
- * 
+ *
  * @param param0 <object>  faqsContent =>{ id: number; query: string; desc: string }
  * @param param2 <number>     state Variable holding index clicked accordion
  * @param param3 <function>   setter function to update State variable
  * @returns <TSX>
  */
-const Accordion: FC<props> = ({ faqsContent, showIndex, setShowIndex }) => {
+const Accordion: FC<banner> = ({ faqsContent, showIndex, setShowIndex }) => {
   let handleShow = (id: number) => {
     if (showIndex !== id) {
       setShowIndex(id);

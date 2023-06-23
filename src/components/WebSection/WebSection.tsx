@@ -1,4 +1,4 @@
-import { websection } from "@/models/websection";
+import { webSection } from "@/models/webSection";
 import React from "react";
 import SectionContent from "../SectionContent/SectionContent";
 import AboutUs from "../AboutUs/AboutUs";
@@ -15,13 +15,13 @@ import Faq from "../Faq/Faq";
         faq: { id: number; query: string; desc: string;}[],
  * @returns <TSX>
  */
-const WebSection = ({ sectionType, data }: websection) => {
+const WebSection = ({ sectionType, data }: webSection) => {
   switch (sectionType) {
-    case "section1":
+    case "section":
       return (
         <>
           <div className="text-white w-full">
-            <SectionContent sectionData={data.section1} />
+            <SectionContent sectionData={data} />
           </div>
         </>
       );
@@ -29,26 +29,20 @@ const WebSection = ({ sectionType, data }: websection) => {
     case "aboutUs":
       return (
         <>
-          <AboutUs about={data.about} />
+          <AboutUs about={data} />
         </>
       );
-    case "section2":
-      return (
-        <>
-          <div className="text-white w-full">
-            <SectionContent sectionData={data.section2} />
-          </div>
-        </>
-      );
-
     case "faqs":
       return (
         <>
           <div className="text-white w-full">
-            <Faq faqs={data.faq} />
+            <Faq faqs={data} />
           </div>
         </>
       );
+
+    default:
+      return <></>;
   }
 };
 
